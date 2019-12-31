@@ -1,9 +1,10 @@
-Project of Daniel-Tuen
+Notes
 ========================     
 #一、Markdown    
-[Markdown](/markdown/markdown.md)    
+[Markdown](markdown/markdown.md)    
 #二、SpringCloud    
-[SpringCloud](/springcloud/springcloud.md)    
+[SpringCloud](springcloud/springcloud.md)    
 #三、Mybatis    
-[Mybatis](/mybatis/mybatis.md)    
-
+[Mybatis](mybatis/mybatis.md)    
+#三、Redis   
+[Redis](redis/redis.md) 

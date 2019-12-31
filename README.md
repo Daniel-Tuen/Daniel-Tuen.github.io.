@@ -1,10 +1,7 @@
-Notes
-========================     
-#一、Markdown    
-[Markdown](markdown/markdown.md)    
-#二、SpringCloud    
-[SpringCloud](springcloud/springcloud.md)    
-#三、Mybatis    
-[Mybatis](mybatis/mybatis.md)    
-#三、Redis   
-[Redis](redis/redis.md) 
+记录
+====
+
+[一、Markdown](markdown/markdown.md)
+[二、SpringCloud](springcloud/springcloud.md)
+[三、Mybatis](mybatis/mybatis.md)
+[四、Redis](redis/redis.md)

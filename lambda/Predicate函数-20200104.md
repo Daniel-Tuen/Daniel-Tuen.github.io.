@@ -18,7 +18,7 @@
                 Objects.requireNonNull(other);
                 return (t) -> test(t) && other.test(t);
             }    
-
+            
 2.||
 
     对应方法:

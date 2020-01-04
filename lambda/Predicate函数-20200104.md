@@ -17,7 +17,7 @@
             default Predicate<T> and(Predicate<? super T> other) {
                 Objects.requireNonNull(other);
                 return (t) -> test(t) && other.test(t);
-            }
+            }    
 
 2.||
 
@@ -25,15 +25,15 @@
             default Predicate<T> or(Predicate<? super T> other) {
                 Objects.requireNonNull(other);
                 return (t) -> test(t) || other.test(t);
-            }
-
+            }    
+            
 3.!
 
     对应方法:
             default Predicate<T> negate() {
                 return (t) -> !test(t);
-            }
-
+            }    
+            
 4.==
 
     静态方法:

@@ -19,7 +19,7 @@
                 return (t) -> test(t) && other.test(t);
             }    
 
-*2.‘||’*
+*2.或*
 
     对应方法:
             default Predicate<T> or(Predicate<? super T> other) {

@@ -7,7 +7,8 @@
 
 断言方法:
 
-            boolean test(T t);
+            boolean test(T t);    
+
 默认实现的方法:
 
 1.&&
@@ -17,6 +18,7 @@
                 Objects.requireNonNull(other);
                 return (t) -> test(t) && other.test(t);
             }
+
 2.||
 
     对应方法:
@@ -24,6 +26,7 @@
                 Objects.requireNonNull(other);
                 return (t) -> test(t) || other.test(t);
             }
+
 3.!
 
     对应方法:

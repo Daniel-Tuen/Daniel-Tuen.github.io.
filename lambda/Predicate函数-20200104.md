@@ -2,12 +2,14 @@
 ===
 
 作用:断言
+
 所在包:java.util.function
 
 断言方法:
 
             boolean test(T t);
 默认实现的方法:
+
 1.&&
 
     对应方法:    
@@ -37,6 +39,7 @@
                     ? Objects::isNull
                     : object -> targetRef.equals(object);
             }
+
 示例:
 
         public static void main(String[] args) {

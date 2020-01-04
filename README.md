@@ -8,3 +8,5 @@
 [三、Mybatis](mybatis/mybatis.md)
 
 [四、Redis](redis/redis.md)
+
+[五、Lambda](lambda/lambda.md)

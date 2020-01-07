@@ -34,7 +34,7 @@
                 return (t) -> !test(t);
             }    
             
-*4.==*
+*4.equals*
 
     静态方法:
             static <T> Predicate<T> isEqual(Object targetRef) {
@@ -70,7 +70,7 @@
             System.out.println("result2:" + result2.toString());
             /* result2 : [2] */
             
-            /* == */
+            /* equals 调用传入对象的equals 方法*/
             List<Integer> result3 = list.stream()
                     .filter(Predicate.isEqual(5)).collect(Collectors.toList());
             System.out.println("result3:" + result3.toString());

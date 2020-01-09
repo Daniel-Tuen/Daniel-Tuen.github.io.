@@ -1,9 +1,11 @@
-函数接口:Predicate < T >
+函数接口:Predicate
 ===
 
 作用:断言
 
-所在包:java.util.function
+所在包:java.util.function    
+
+1.Predicate<T>    
 
 断言方法:
 
@@ -76,3 +78,61 @@
             System.out.println("result3:" + result3.toString());
             /* result3 : [5] */
         }
+
+1.1 IntPredicate| DoublePredicate| LongPredicate
+---
+
+ ==独立接口==; Predicate<T>的Int、Double、Long类型入参扩展
+
+        public static void main(String[] args) {
+            
+            /* IntPredicate */
+            IntPredicate p1 = x -> x > 6;
+            IntPredicate p2 = x -> x < 10;
+            boolean test = p1.and(p2).test(7);
+            System.out.println(test);
+            
+            /* DoublePredicate */
+            DoublePredicate p3 = x -> x > 0;
+            DoublePredicate p4 = x -> x != 0;
+            boolean test2 = p3.or(p4).test(0);
+            System.out.println(test2);
+            
+            /* LongPredicate */
+            LongPredicate p5 = x -> x > 0;
+            boolean test3 = p5.negate().test(5L);
+            System.out.println(test3);
+            
+            /* LongPredicate 可以接收 Int 类型值,  同基础类型*/
+            int i = Integer.MAX_VALUE;
+            boolean test4 = p5.test(i);
+            System.out.println(test4);
+            
+            /* 
+            * ps.自己产生的错误想法:
+            * filter 入参为 Predicate<? super T> predicate
+            *    是不能使用IntPredicate、DoublePredicate、LongPredicate的
+            *    因为和Predicate<T> 没有继承关系，是独立的接口
+            */
+            List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+            list.stream().filter(p1).collect(Collectors.toList());
+        }
+        
+2.BiPredicate<T, U>    
+---
+
+==独立接口==; Predicate<T>的二元扩展    
+
+            BiPredicate<String, LocalDate> biP1 = (x, y) -> {
+                String temp = "abc";
+                LocalDate date = LocalDate.of(2020, 1, 9);
+                boolean test5 = Predicate.isEqual(temp).test(x);
+                Predicate<LocalDate> datePredicate = time -> time.isBefore(date);
+                boolean test6 = datePredicate.test(y);
+                if(test5 && test6) {
+                    return true;
+                }
+                return false;
+            };
+            boolean test7 = biP1.test("abc", LocalDate.of(2020, 1, 8));
+            System.out.println(test7);

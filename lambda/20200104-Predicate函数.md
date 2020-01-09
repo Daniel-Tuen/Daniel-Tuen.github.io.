@@ -103,11 +103,6 @@
             boolean test3 = p5.negate().test(5L);
             System.out.println(test3);
             
-            /* LongPredicate 可以接收 Int 类型值,  同基础类型*/
-            int i = Integer.MAX_VALUE;
-            boolean test4 = p5.test(i);
-            System.out.println(test4);
-            
             /* 
             * ps.自己产生的错误想法:
             * filter 入参为 Predicate<? super T> predicate

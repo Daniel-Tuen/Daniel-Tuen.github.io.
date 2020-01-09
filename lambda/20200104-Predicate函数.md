@@ -13,7 +13,7 @@
 
 默认实现的方法:
 
-*1.&&*
+*1.1 &&*
 
     对应方法:    
             default Predicate<T> and(Predicate<? super T> other) {
@@ -21,7 +21,7 @@
                 return (t) -> test(t) && other.test(t);
             }    
 
-*2.或*
+*1.2 或*
 
     对应方法:
             default Predicate<T> or(Predicate<? super T> other) {
@@ -29,14 +29,14 @@
                 return (t) -> test(t) || other.test(t);
             }    
             
-*3.!*
+*1.3 !*
 
     对应方法:
             default Predicate<T> negate() {
                 return (t) -> !test(t);
             }    
             
-*4.equals*
+*1.4 equals*
 
     静态方法:
             static <T> Predicate<T> isEqual(Object targetRef) {
@@ -79,7 +79,7 @@
             /* result3 : [5] */
         }
 
-1.1 IntPredicate| DoublePredicate| LongPredicate
+2.IntPredicate| DoublePredicate| LongPredicate
 ---
 
  ==独立接口==; Predicate<T>的Int、Double、Long类型入参扩展
@@ -118,7 +118,7 @@
             list.stream().filter(p1).collect(Collectors.toList());
         }
         
-2.BiPredicate<T, U>    
+3.BiPredicate<T, U>    
 ---
 
 ==独立接口==; Predicate<T>的二元扩展    

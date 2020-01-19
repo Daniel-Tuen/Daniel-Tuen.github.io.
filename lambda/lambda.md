@@ -13,4 +13,6 @@ Lambda
 
 6.[方法引用](20200107-方法引用.md)    
 
-7.[Optional](20200110-Optional.md)
+7.[Optional](20200110-Optional.md)    
+
+8.[Stream](20200115-Stream.md)

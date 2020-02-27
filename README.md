@@ -10,3 +10,5 @@
 [四、Redis](redis/redis.md)
 
 [五、Lambda](lambda/lambda.md)
+
+[六、HeadFirst设计模式](headfirst/headfirst.md)
